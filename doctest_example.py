@@ -59,6 +59,7 @@ def main():
         
         try:
             print(f"The {int(num)}th Fibonacci number is {fib(num)}.")
+            break
             
         except Exception as e:
             print(f"Error: {e}")
