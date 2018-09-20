@@ -2,7 +2,6 @@ from math import *
 
 
 
-
 def calc_mid_pt(x1,y1,x2,y2):
     """returns mid point of the line through a given set of coordinates
 
@@ -54,7 +53,7 @@ def slope():
     x2 = int(input("What is x2?  "))
     y2 = int(input("What is y2?  "))
     print("The slope of points ({},{}) and ({},{}) is {}.".format(x1,y1,x2,y2,calc_slope(x1,y1,x2,y2)))
-
+    
 
 
     
@@ -65,6 +64,7 @@ def perc_err():
     err = int(input("What is your data?  "))
     lit = int(input("What is the official data result?  "))
     print("The percent error between your data, {}, and the official data, {}, is {}%.".format(err,lit,calc_perc_err(err,lit)))
+    
     
 def calc_perc_err(err,lit):
     '''returns the percent error of the problem by taking in the person's data and the official data results
@@ -85,11 +85,28 @@ def calc_perc_err(err,lit):
 
     
 
-def main():
-    #slope()
-    #mid_pt()
-    #perc_err()
+    
 
+def main():
+    while True:
+        p = input("Welcome to Math Helper! Which of the following would you like to find?(Use numbers to select):\n1)Mid Point\n2)Slope\n3)Percent Error\n>")
+        if p == '1':
+            mid_pt()
+        if p == '2':
+            slope()
+        if p == '3':
+            perc_err()
+            
+        a = input("Would you like to (1) calculate this equation again, (2) use a different formula, or (3) end this program?\n>")
+        if a == '1':
+            print("\n")
+            
+        if a == '2':
+            print("\n")
+            
+        if a == '3':
+            print("\nThanks for stopping by!")
+            break
 if __name__ == "__main__":
     main()
     #import doctest
