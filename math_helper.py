@@ -30,7 +30,10 @@ def mid_pt():
     y1 = int(input("What is y1?  "))
     x2 = int(input("What is x2?  "))
     y2 = int(input("What is y2?  "))
-    print("The midpoint of points ({},{}) and ({},{}) is {}.".format(x1,y1,x2,y2,calc_mid_pt(x1,y1,x2,y2)))
+    if x1 == x2 and y1 == y2:
+        print('There is no midpoint.')
+    if x1 != x2 and y1 != y2:
+        print("The midpoint of points ({},{}) and ({},{}) is {}.".format(x1,y1,x2,y2,calc_mid_pt(x1,y1,x2,y2)))
     
     
     
@@ -96,8 +99,11 @@ def calc_perc_err(err,lit):
         >>> calc_perc_err(6,4)
         50.0
     '''
-    pe = ((err - lit) / lit) * 100
+    pe = abs(((err - lit) / lit) * 100)
     return pe
+
+
+
 
 def pythag():
     print("We will use this equation: a**2 + b**2 = c**2")
@@ -123,7 +129,9 @@ def calc_pythag(a,b):
         >>> calc_pythag(28,19)
         
     '''
-    return a**2 + b**2
+    a2 = a**2
+    b2 = b**2
+    return (a2 + b2)//2
     
 
     
