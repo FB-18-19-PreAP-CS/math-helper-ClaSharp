@@ -109,29 +109,33 @@ def pythag():
     print("We will use this equation: a**2 + b**2 = c**2")
     a = int(input("What is a?  "))
     b = int(input("What is b?  "))
-    print("The missing length is {}.".format(a,b,calc_pythag(a,b)))
+    calc_pythag(a,b)
+    #print("The missing length is {}.".format(a,b,calc_pythag(a,b)))
     
 def calc_pythag(a,b):
     '''this finds the missing side length using "a" and "b"
         
         >>> calc_pythag(5,8)
-        
+        9.43
         
         >>> calc_pythag(9,6)
-        
+        10.82
         
         >>> calc_pythag(23,14)
-        
+        26.93
         
         >>> calc_pythag(3,7)
-        
+        7.62
         
         >>> calc_pythag(28,19)
-        
+        33.84
     '''
-    a2 = a**2
-    b2 = b**2
-    return (a2 + b2)//2
+
+    c = sqrt(a**2 + b**2)
+    c = round(c,2)
+    #return c
+    print("The missing length is {}.".format(c))
+
     
 
     
